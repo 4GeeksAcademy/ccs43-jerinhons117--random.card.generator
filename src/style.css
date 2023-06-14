@@ -1,1 +1,92 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+/*@import "~bootstrap/dist/css/bootstrap.min.css";*/
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Comforter&family=Kanit:wght@100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  background: rgb(0, 58, 0);
+  height: 100vh;
+}
+
+.card {
+  text-align: center;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  height: 50vh;
+  width: 20vw;
+  font-size: 120px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px #000;
+  position: relative;
+  transition: 1s;
+
+  &:before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 80px;
+  }
+  &:after {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 80px;
+  }
+  &.spades:before,
+  &.spades::after {
+    content: "\2660";
+  }
+  &.heart:before,
+  &.heart::after {
+    content: "\2665";
+    color: red;
+  }
+  &.club:before,
+  &.club::after {
+    content: "\2665";
+  }
+  &.diamond:before,
+  &.diamond::after {
+    content: "\2666";
+    color: red;
+  }
+}
+
+.card:hover {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+.botton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botton button {
+  width: 200px;
+  height: 50px;
+  padding: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #929001;
+  color: aliceblue;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px #000;
+  transition: 1s;
+}
+
+.botton:hover {
+  transform: scale(1.1);
+}
